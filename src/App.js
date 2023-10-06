@@ -13,7 +13,7 @@ import Detail from './Detail.js'
 
 
 
-function NavScrollExample() {
+function NavScrollExample(props) {
 
   let [Shoes] = useState(data)
   let navigate = useNavigate();
@@ -21,9 +21,6 @@ function NavScrollExample() {
 
   return (
  <div className="App">
-
-
-
     <Navbar expand="lg" className="bg-body-tertiary">
   
         <Navbar.Brand href="#"><Link to="/"><img src="/mainaroma.png" alt="Sbottle"/></Link></Navbar.Brand>
@@ -107,7 +104,7 @@ function NavScrollExample() {
     <Route path="location" element={<div>회사 위치정보</div>}/>
     </Route>
 
-    <Route path="*" element={<div>404페이지는 없는 페이지입니다.</div>}/>
+    {/* <Route path="*" element={<div>404페이지는 없는 페이지입니다.</div>}/> */}
 
     <Route path="/Event" element={<Event/>}>
     <Route path="one" element={<p>첫주문시 양배추츱 서비스</p>}/>
